@@ -1,46 +1,32 @@
-# Template R operator for Tercen
-
-The `Template R operator` is a template repository for the creation of R operators in Tercen. An overview of steps for developing an operator are:
-
-1. create a github repo
-2. install tercen_studio
-3. login to tercen_studio
-4. git clone the newly created repo
-5. start developing in R in tercen_studio
-6. add R packages to the repo
-7. push to the github repo
-8. go to tercen and install the operator
-
-More information can be found in [Tercen app builder's guide](https://tercen.github.io/appbuilders-guide/).
-
-Below is the operator README standard structure:
+# Genome join operator
 
 ##### Description
 
-The `Template R operator` is a template repository for the creation of R operators in Tercen.
+The `genome join operator` joins two tables based on overlapping genomic intervals.
 
 ##### Usage
 
 Input projection|.
 ---|---
-`x-axis`        | type, description 
-`y-axis`        | type, description 
-`row`           | type, description 
-`column`        | type, description 
-`colors`        | type, description 
-`labels`        | type, description 
+`row1`           | character, chromosome name (left table) 
+`row2`           | numeric, range start position (left table)
+`row3`           | numeric, range end position (left table)
+`column`        | character, document ID of the right table
+
+Input parameters|.
+---|---
+`columns`        | comma-separated columns names representing `chromosome`, `start` and `end` in the right table.
 
 Output relations|.
 ---|---
-`output_var`        | output relation
-`Operator view`        | view of the Shiny application
+`variables`        | variables from the right table
 
 ##### Details
 
-Details on the computation.
+This operator is a wrapper of the `genome_join` function of the `fuzzyjoin` [R package](https://www.rdocumentation.org/packages/fuzzyjoin/versions/0.1.6/topics/genome_join).
 
 ##### See Also
 
-[template_shiny_operator](https://github.com/tercen/template_shiny_operator)
-, [template_docker_operator](https://github.com/tercen/template_docker_operator)
+[join_GFF_operator](https://github.com/tercen/join_GFF_operator)
+, [read_vcf_operator](https://github.com/tercen/read_vcf_operator)
 

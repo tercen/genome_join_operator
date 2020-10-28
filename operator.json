@@ -1,10 +1,17 @@
 {
-  "name": "Template R operator",
-  "description": "Return the medium value of a cell",
-  "tags": ["template"],
+  "name": "Genome join operator",
+  "description": "Join two tables based on overlapping genomic interval.",
+  "tags": ["bioinformatics", "import"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/template_R_operator"],
-  "properties": []
+  "urls": ["https://github.com/tercen/genome_join_operator"],
+  "properties": [
+    {
+    "kind": "StringProperty",
+    "name": "columns",
+    "defaultValue": "chromosome, start, end",
+    "description": "Comma-separated columns names representing chromosome, start and end in the right table."
+    }
+  ]
 }
 
 
