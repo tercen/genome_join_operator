@@ -1,6 +1,6 @@
 {
-  "name": "Genome join operator",
-  "description": "Join two tables based on overlapping genomic interval.",
+  "name": "Join Genome",
+  "description": "Connect two tables based on overlapping genomic interval.",
   "tags": ["bioinformatics", "import"],
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/genome_join_operator"],
